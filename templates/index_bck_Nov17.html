@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dog Breed Classification Demo</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+  <h1><font style='Century Gothic'>Dog Breed Classifer</font></h1>
+  <img src="static/dogs_header.jpg">
+
+<!-- <form action="/download" method="POST">
+    <fieldset>
+        <legend>Image URL</legend>
+        <input type="text" name="address"
+               value="http://cdn2-www.cattime.com/assets/uploads/gallery/ragdoll/ragdoll-cats-kittens-2.jpg" size="100"><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form> -->
+
+<br><br>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Upload Image</legend>
+        <input type="file" name="image">
+        <input type="submit" value="Upload and Classify!" class="btn btn-primary">
+    </fieldset>
+</form>
+</body>
+</html>
