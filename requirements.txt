@@ -1,0 +1,15 @@
+Flask==0.12.1
+
+
+keras
+
+gevent
+gunicorn
+numpy
+
+h5py
+
+pillow
+
+pandas
+tensorflow

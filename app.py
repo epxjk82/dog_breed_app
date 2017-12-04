@@ -1,12 +1,12 @@
 from flask import Flask, render_template, request, send_from_directory
 import os
 import urllib
+from glob import glob
 from keras.models import load_model
 from keras.preprocessing import image
 from keras.applications import xception
 # from keras.applications import resnet50
 # from keras.applications.imagenet_utils import preprocess_input, decode_predictions
-import cv2
 import numpy as np
 from glob import glob
 from load import *
@@ -67,6 +67,9 @@ def predict(filename):
         result = []
         result.append(dog_names[np.argmax(pred)])
         pred_breed = dog_names[np.argmax(pred)]
+        examples = glob('static/breed_examples/'+pred_breed + '/*')
+        for example in examples:
+            print (example)
         pred_breed = pred_breed.replace('_', ' ')
         # decode_result = decode_predictions(pred)[0]
 
@@ -74,10 +77,15 @@ def predict(filename):
         #     result.append({'name':r[1], 'prob':r[2]*100})
         return render_template('predict.html',
                                filename=filename,
-                               predictions=pred_breed)
+                               predictions=pred_breed,
+                               example1=examples[0],
+                               example2=examples[1],
+                               example3=examples[2],
+                               example4=examples[3],
+                               example5=examples[4])
 
 if __name__ == "__main__":
-    os.environ["CUDA_VISIBLE_DEVICES"] = ""
-    # app.run(host='0.0.0.0', port=PORT)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
     # app.run(debug=True)
-    app.run()
+    # app.run()

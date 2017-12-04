@@ -1,0 +1,13 @@
+Flask==0.12.1
+
+
+keras
+
+numpy
+
+h5py
+
+pillow
+
+pandas
+https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.4.0-cp35-cp35m-win_amd64.whl

@@ -6,12 +6,12 @@ import tensorflow as tf
 
 
 def init():
-	json_file = open('inceptionv3.final_model.json','r')
+	json_file = open('inceptionv3.dropout.retrain_all.final_model.json','r')
 	loaded_model_json = json_file.read()
 	json_file.close()
 	loaded_model = model_from_json(loaded_model_json)
 	#load woeights into new model
-	loaded_model.load_weights("inceptionv3.final_weights.hdf5")
+	loaded_model.load_weights("inceptionv3.dropout.retrain_all.final_weights.hdf5")
 	print("Loaded Model from disk")
 
 	#compile and evaluate loaded model

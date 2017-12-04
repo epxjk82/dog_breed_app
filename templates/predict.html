@@ -45,9 +45,19 @@ input[type=file] {
 </div>
 
 <div align=center>
-  <img src={{ filename }} height=300>
+  <img src={{ filename }} height="400">
   <br><br>
   <h2>Predicted Breed: {{ predictions }}</h2>
+</div>
+<br>
+<div class="examples" align=center>
+  <table cellpadding="10"><tr>
+    <td><img src={{example1}} height="150"></td>
+    <td><img src={{example2}} height="150"></td>
+    <td><img src={{example3}} height="150"></td>
+    <td><img src={{example4}} height="150"></td>
+    <td><img src={{example5}} height="150"></td>
+  </tr></table>
 </div>
 <br>
 <div class="w3-clear">
@@ -62,26 +72,6 @@ input[type=file] {
 </div>
 <hr>
 <br>
-<!-- Photo Grid -->
-<div class="w3-row" id="myGrid" style="margin-bottom:128px">
-  <div class="w3-third">
-    <img src="static/dog4.jpg" style="width:95%;height:95%"><br><br>
-    <img src="static/dog5.jpg" style="width:95%;height:95%"><br><br>
-  </div>
-
-  <div class="w3-third">
-    <img src="static/dog1.jpg" style="width:95%;height:95%"><br><br>
-    <img src="static/dog6.jpg" style="width:95%;height:95%"><br><br>
-    <img src="static/dog8.jpg" style="width:95%;height:95%"><br><br>
-  </div>
-
-  <div class="w3-third">
-    <img src="static/dog9.jpg" style="width:95%;height:95%"><br><br>
-    <img src="static/dog7.jpg" style="width:95%;height:95%"><br><br>
-    <img src="static/dog3.jpg" style="width:95%;height:95%"><br><br>
-  </div>
-</div>
-
 <!-- End Page Content -->
 </div>
 
